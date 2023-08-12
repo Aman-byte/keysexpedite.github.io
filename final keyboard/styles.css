@@ -1,0 +1,180 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* ... more reset rules ... */
+
+
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure full viewport height */
+    margin: 0; /* Reset default margin */
+    
+    
+}
+.design{
+    position: relative;
+    left: -30px;
+}  
+  .box1 {
+    display: flex;
+    width: 500px;
+    height: 360px;
+    background-color: rgb(12, 31, 44);
+  }
+
+  .box2 {
+    width: 400px;
+    height: 400px;
+    background-color:rgb(204, 56, 67);
+  }
+  
+  
+  .box1 {
+    display: flex; /* Displaying the halves side by side */
+    position: relative; /* Default positioning */
+    z-index: 2; /* Higher value brings the element forward */
+    top: 20px;
+    bottom: 50px;
+    left: 200px;
+    border-radius: 20px;
+    font-size: 10px;
+  }
+
+  .half1, .half2 {
+    flex: 1; /* Equal distribution of space */
+    height: 200px; /* Adjust to your desired height */
+    margin-top: 25px;
+}
+
+
+.half2{
+    width: 60%;
+}
+
+.half2 h2{
+    font-size: 24px;
+}
+
+.half2 h3{
+    font-size: 14px;
+}
+
+.half2 img{
+    width: 50px;
+}
+
+  
+  .box2 {
+    position: absolute; /* Positioned absolutely within the container */
+    top: 0px;
+    left: 10px;
+    z-index: 1; /* Lower value places the element behind */
+    border-radius: 20px;
+  }
+
+  .image {
+    top: -50px;
+    left: -50px;
+    position: absolute;
+    width: 500px;
+    z-index: 3;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 100px;
+  }
+  
+  .button2 {background-color: #008CBA;} /* Cherry MX specific Blue */
+  .button3 {background-color: red;} 
+  .button4 {background-color: brown;}
+  .button5 {background-color: yellow;} 
+
+  .cart{
+    background-color: rgb(207, 37, 68);
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+  }
+
+  .box2{
+    font-family: 'Montserrat', sans-serif;
+    transform: rotate(270deg);
+    font-size: 75px;
+    text-align: center;
+    color: rgb(163, 45, 54);
+    font-weight: bolder;
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+  }
+
+  .prev-button, .next-button{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+
+  }
+  
+  .prev-button{
+    position: relative;
+    /* left: 20px; */
+    left: -650px;
+    top: 0px;
+  }
+
+  .next-button{
+    position: relative;
+    right: -150px;
+    top: 0px;
+  }
+
+  li{
+    padding-left: 10px;
+    list-style: none;
+  }
+
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* You can adjust this as needed */
+}
+
+
+
+
