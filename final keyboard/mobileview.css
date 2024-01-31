@@ -1,0 +1,158 @@
+@media (max-width: 768px){
+
+*{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    
+    
+    body{
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #232323;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Ensure full viewport height */
+        margin: 0; /* Reset default margin */        
+    }
+    .design{
+        position: relative;
+        top: 60px;
+    }  
+      .box1 {
+        display: flex;
+        width: 500px;
+        height: 410px;
+        background-color: rgb(12, 31, 44);
+        max-width: 220px;
+        padding: 10px;
+      }
+    
+      .box2 {
+        width: 400px;
+        height: 420px;
+        background-color:rgb(204, 56, 67);
+        max-width: 280px;
+        max-height: 200px;
+      }
+      
+      
+      .box1 {
+        display: flexbox;
+        flex-direction: column; 
+        position: relative;
+        z-index: 2;
+        top: 0px;
+        bottom: 50px;
+        left: -0px;
+        border-radius: 20px;
+        font-size: 10px;
+    }
+    
+    .half1, .half2 {
+        height: 200px;
+        margin-top: 25px;
+    }
+
+    .half1{
+      height: 20%;
+    }
+    
+    .half2 {
+        width: 100%; /* Take up the full width of the container */
+    }
+
+    .half2 h2{
+        /* font-size: 24px; */
+        font-size: 18px;
+    }
+    
+    .half2 h3{
+        /* font-size: 14px; */
+        font-size: 14px;
+    }
+      
+      .box2 {
+        position: absolute; /* Positioned absolutely within the container */
+        top: -120px;
+        left: -15px;
+        z-index: 1; /* Lower value places the element behind */
+        border-radius: 20px;
+      }
+    
+      .image {
+        top: -100px;
+        position: absolute;
+        max-width: 250px;
+        z-index: 3;
+    }
+    
+    .button {
+        border: none;
+        color: white;
+        padding: 7px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 100px;
+      }
+      
+      .button2 {background-color: #008CBA;} /* Cherry MX specific Blue */
+      .button3 {background-color: red;} 
+      .button4 {background-color: brown;}
+      .button5 {background-color: yellow;} 
+    
+      .cart{
+        background-color: rgb(207, 37, 68);
+        width: 90px;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+      }
+    
+      .box2{
+        font-family: 'Montserrat', sans-serif;
+        /* transform: rotate(270deg); */
+        font-size: 45px;
+        text-align: center;
+        color: rgb(163, 45, 54);
+        font-weight: bolder;
+        text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+      }
+    
+      .prev-button, .next-button{
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        border: none;
+    
+      }
+      
+      .prev-button{
+        position: relative;
+        left: 30px;
+        top: 10px;
+      }
+    
+      .next-button{
+        position: relative;
+        right: -100px;
+        top: 10px;
+      }
+    
+      li{
+        padding-left: 10px;
+        list-style: none;
+      }
+    }

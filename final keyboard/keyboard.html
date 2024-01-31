@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <title>Royal Kludge 84 Keyboard</title>
+</head>
+<body>
+    <div class="design">
+        <div class="box1">
+            <div class="half1"></div>
+            <div class="half2">
+                <h2>Royal Kludge 84</h2>
+                <h3><s>$80</s> $69.99</h3> <br>
+                <div>
+                    <h3>Color</h3>
+                    <button class="color-button" onclick="selectColor('Black')"><img src="RK84/RK84B0WHITEBG.png" alt="black color"></button>
+                    <button class="color-button" onclick="selectColor('White')"><img src="RK84/RK84W0WHITEBG.png" alt="white color"></button>
+                </div> <br>
+
+                <div>
+                    <h3>Switch</h3>
+                    <button class="switch-button BlueSwitch" onclick="selectSwitch('Blue')">Blue</button>
+                    <button class="switch-button RedSwitch" onclick="selectSwitch('Red')">Red</button>
+                    <button class="switch-button BrownSwitch" onclick="selectSwitch('Brown')">Brown</button>
+                </div> <br>
+               
+                <div>
+                    <h3>Selected Options</h3>
+                    <p id="selectedOptions"></p>
+                </div> <br>
+                <div>
+                    <h3>Features</h3>
+                    <ul>
+                        <li>84 keys layout</li>
+                        <li>2 USB 2.0 passthrough</li>
+                        <li>Diverse RGB</li>
+                        <li>Hot-swappable switch</li>
+                    </ul>
+                </div> <br>
+
+                <button class="addtocart">Add to Cart</button>
+
+            </div>
+        </div>
+
+        <div class="box2">
+            <h1><strong>ROYAL KLUDGE</strong></h1>
+        </div>
+
+        <div class="container">
+            <img class="image" src="RK84/RK84B0.png" alt="Image">
+            <img class="image" src="RK84/RK84B1.png" alt="Image">
+            <img class="image" src="RK84/RK84B2.png" alt="Image">
+            <img class="image" src="RK84/RK84B3.png" alt="Image">
+            <img class="image" src="RK84/RK84W0.png" alt="Image">
+            <img class="image" src="RK84/RK84W1.png" alt="Image">
+            <img class="image" src="RK84/RK84W2.png" alt="Image">
+            <img class="image" src="RK84/RK84W3.png" alt="Image">
+        </div>
+    </div>
+
+    <button class="prev-button">◄</button>
+    <button class="next-button">►</button>
+
+
+
+    <script src="script.js"></script>
+    <script>
+        function selectColor(color) {
+            document.getElementById('selectedOptions').innerText = 'Color: ' + color;
+        }
+    
+        function selectSwitch(switchType) {
+            var selectedOptions = document.getElementById('selectedOptions');
+            // Check if the switch information already exists
+            if (selectedOptions.innerText.includes('Switch:')) {
+                selectedOptions.innerText = selectedOptions.innerText.replace(/Switch: \w+/, 'Switch: ' + switchType);
+            } else {
+                selectedOptions.innerText += ' | Switch: ' + switchType;
+            }
+        }
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <title>JWK Ultimate Black Switches</title>
+</head>
+<body>
+
+    
+    <div class="design">
+        <div class="box1">
+            <div class="half1"></div>
+            <div class="half2">
+                <h2>JWK Ultimate</h2> <br>
+                <h3><s>$22</s> $17.99</h3> <br>
+                <div>
+                <h3>Spring Options</h3> <br>
+                <button class="switch-button-weight"onclick="selectWeight('50g')">50g</button>
+                <button class="switch-button-weight"onclick="selectWeight('60g')">60g</button>
+                </div> <br>  
+                <div>
+                    <h3>Selected Options</h3>
+                    <p id="selectedOptions"></p>
+                </div> <br>                  
+                
+                <div>
+                    <h3>Features</h3> <br>
+                <ul>
+                    <li>Linear</li>
+                    <li>Stem: POM</li>
+                    <li>Top Housing: Polycarbonate</li>
+                    <li>Bottom Housing: PA66</li>
+                    <li>PCB Mount (5pin)</li>
+                    <li>Pre-Lubed</li>
+                    <li>1 Quantity = 60 Switches</li>
+                    </ul>
+                </div> <br>
+                <button class="addtocart">Add to Cart</button>
+
+
+            </div>
+        </div>
+
+    <div class="box2">
+        <h1> <strong>JWICK BLACK</strong></h1>
+    </div>
+
+    <div class="container">
+
+    <img class="image" src="Switch/JWK-Ultimate-Black-1.png" alt="Image">
+    <img class="image" src="Switch/JWK-Ultimate-Black-2.png" alt="Image">
+    <img class="image" src="Switch/JWK-Ultimate-Black-3.png" alt="Image">
+    <img class="image" src="Switch/JWK-Ultimate-Black-4.png" alt="Image">
+ 
+
+</div>
+</div>
+   
+    <button class="prev-button">◄</button>
+    <button class="next-button">►</button>
+      <script src="script.js"></script>
+      <script>
+        function selectWeight(weight) {
+    // Update the selectedOptions paragraph content
+    document.getElementById("selectedOptions").innerText = "Selected Weight: " + weight;
+}
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+/* doing a css reset */
+head, body, ul, li, h1, h2, h6, a, form, footer{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: black;
+    text-align: center;
+    position: fixed;
+    padding: 10px;
+    z-index: 1;
+    width: 100%;
+}
+
+header h1{
+    /* so that is doesn't interfere with rest of the header elements */
+    display: inline-block;
+    color: white;
+    border: 4px solid white;
+    margin: 2px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 9px;
+}
+
+
+.banner {
+	position: relative;
+    /* margin-top: 30px; */
+}
+
+.banner img {
+	width: 100%;
+    margin-top: 78px
+}
+
+.banner .Welcome {
+	/* background-color: turquoise; */
+    /* background-color: transparent; */
+    /* background-color: translucent; */
+	/* color: black;
+	padding: 3%;
+	position: absolute;
+	left: 0;
+	top: 10%;
+    /* background opaque:- background red green blue alpha */
+    /*background:rgba(255, 255, 255, 0.5); */
+
+    color: white;
+	padding: 3%;
+	position: absolute;
+	left: 0;
+	top: 50%;
+    /* background opaque:- background red green blue alpha */
+    background:rgba(0, 0, 0, 0.5);
+    border: 5px solid white;
+
+}
+
+
+.banner h2 {
+	font-size: 15px;
+}
+
+.banner h2 span {
+	font-size: 3em;
+}
+
+nav{
+    background-color: black;
+	position: sticky;
+    top: 78px;
+    }
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+
+}
+nav li{
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+nav a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    display: block;
+    padding: 10px;
+  }
+
+nav a:hover{
+background-color: #555;
+}
+
+nav ul{
+    display: flex;
+   
+}
+
+nav li{
+flex: 1 1 0;
+/* border: 1px solid white ; */
+}
+
+
+.homepage{
+    text-align: center; 
+}
+
+.homepage h1{
+    padding: 10px;
+    padding-bottom: 0px;
+    font-size: 50px;
+}
+.homepage h6{
+    padding: 10px;
+    font-size: 15px;
+}
+.homepage img{
+    /* height: auto; */
+    /* width: 751px; */
+    width: 100%;
+    /* border: 20px solid black; */
+    
+   
+}
+
+section.join {
+    border-top: 5px solid black;    
+	background: white;
+	text-align: center;
+	/* padding: 6px 20px; */
+	color: black;
+}
+
+.join h2 {
+	font-size: 30px;
+    padding: 15px;
+}
+
+footer {
+	background: peachpuff;
+	color: black;
+	padding: 10px;
+	text-align: center;
+}
+/* should I make all the buttons same? */
+button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 15px;
+    border-radius: 50px;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+}
+ 
+/* The container <div> - needed to position the dropdown content
+.dropdown {
+  position: relative;
+  display: inline-block;
+} */
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  background-color: black;
+  color: white;
+  padding: 12px 118px;
+  text-decoration: none;
+  display: block;
+}
+
+/* /* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: white;
+color: black;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+.container {
+    margin: 10px;
+    margin-top: 88px;
+}
+
+.gallery {
+    display: grid;
+    
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(7, 0.5fr);
+    grid-gap: 10px; 
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    display: block; 
+    border-radius: 19px;
+    max-block-size: 1000px;
+}
+
+.one{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.three{
+    grid-column-start: 7;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.four{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.five{
+    grid-column-start: 7;
+    grid-column-end: 11;
+    grid-row-start: 7;
+    grid-row-end:7;
+}
+/* .six{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.seven{
+    grid-column-start: 5;
+    grid-column-end: 11;
+    grid-row-start: 3;
+    grid-row-end: 4;
+} */
+.six{
+    grid-column-start: 7;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+/* .seven{
+    grid-column-start:1;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+} */
+.two{
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.twelve{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+.nine{
+    grid-column-start: 6;
+    grid-column-end: 11;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+.ten{
+    grid-column-start: 6;
+    grid-column-end: 11;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+.eleven{
+    grid-column-start: 1;
+    grid-column-end: 6 ;
+    grid-row-start:6;
+    grid-row-end: 7;
+}
+.eight{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start:7;
+    grid-row-end:7 ;

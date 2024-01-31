@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #141414;
+  text-align: justify;
+}
+
+/* Headings styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #212121;
+}
+
+/* Basic styling for the navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #141414;
+  padding: 20px 20px;
+}
+
+/* Styling for the logo */
+.logo img {
+  height: 120px;
+}
+
+/* Styling for the navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  font-size: 24px;
+}
+
+.nav-links a:hover {
+  color: #ffc107;
+}
+
+/* Basic styling for the navigation bar ends here */
+.icons {
+  color: white;
+  display: flex;
+}
+
+.icons .material-symbols-outlined {
+  font-size: 30px;
+}
+
+/* Search Bar Styles */
+.search {
+  position: relative;
+}
+
+.search input[type=text] {
+  position: relative;
+  width: 300px;
+  height: 25px;
+  border-radius: 25px;
+}
+
+.search button {
+  background: none;
+  color: white;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Search Results Styles */
+#searchResults {
+  position: absolute;
+  top: 100%; /* Position below the search bar */
+  left: 0;
+  width: 100%;
+  background-color: #141414;
+  z-index: 1; /* Display above other elements */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+}
+
+#searchResults li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  list-style: none;
+}
+
+#searchResults li:hover {
+  background-color: #f5f5f5;
+}
+
+/* footer styling starts header */
+.footer {
+  display: flex;
+  background-color: #141414;
+  color: white;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-logo {
+  padding: 10px;
+}
+
+.footer h2 {
+  margin: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: white;
+  text-align: left;
+}
+
+.footer p {
+  margin: 0;
+  padding-top: 10px;
+  text-align: left;
+}
+
+/* footer styling ends here */
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+/* Styling for the banner */
+.banner {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product {
+  padding: 0px;
+  }
+
+.product h2 {
+  text-align: left;
+  color: white;
+}
+
+.product p {
+  text-align: left;
+  color: #999999;
+}
+
+.product img {
+  max-width: 100%;
+}
+
+.product {
+  flex: 1;
+  color: white;
+}
+
+.price {
+  flex-shrink: 0;
+  color: white;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-menu .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+@media (min-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #141414;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    padding: 10px;
+    z-index: 99;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.hamburger-menu {
+    display: block;
+}
+
+.icons {
+  display: none;
+}
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    padding: 10px 0;
+  }
+
+  .footer-logo {
+    padding: 10px 0;
+  }
+}

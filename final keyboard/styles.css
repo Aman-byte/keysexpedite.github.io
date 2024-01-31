@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('newdarkbackground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.design {
+    position: relative;
+    left: -30px;
+}
+
+.box1 {
+    display: flex;
+    width: 500px;
+    height: 430px;
+    background-color: rgb(12, 31, 44);
+    position: relative;
+    z-index: 2;
+    top: 20px;
+    bottom: 50px;
+    left: 200px;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+.half1,
+.half2 {
+    flex: 1;
+    height: 200px;
+}
+
+.half2 {
+    margin-top: 25px;
+}
+
+.half2 h2 {
+    font-size: 24px;
+}
+
+.half2 h3 {
+    font-size: 14px;
+}
+
+.half2 img {
+    width: 50px;
+}
+
+.box2 {
+    width: 500px;
+    height: 480px;
+    background-color: rgb(204, 56, 67);
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.image {
+    top: -50px;
+    left: -50px;
+    position: absolute;
+    width: 500px;
+    z-index: 3;
+}
+
+.BlueSwitch,
+.RedSwitch,
+.BrownSwitch,
+.switch-button {
+    border: 5px solid transparent;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 7px;
+    /* margin: 4px 2px; */
+}
+
+.color-button{
+    border: 5px solid transparent;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.BlueSwitch:focus,
+.RedSwitch:focus,
+.BrownSwitch:focus,
+.switch-button:focus {
+    border-color: #007bff; /* Change the color to your preference */
+}
+.color-button:focus{
+    border-color: red;
+}
+
+.switch-button-weight{
+    border: 5px solid transparent;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+.switch-button-weight:focus{
+    border-color: crimson; /* Change the color to your preference */
+}
+
+.cart {
+    background-color: rgb(207, 37, 68);
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+.box2 {
+    font-family: 'Montserrat', sans-serif;
+    transform: rotate(270deg);
+    font-size: 75px;
+    text-align: center;
+    color: rgb(163, 45, 54);
+    font-weight: bolder;
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+.prev-button,
+.next-button {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    border: none;
+}
+
+.prev-button {
+    position: relative;
+    left: -630px;
+    top: 70px;
+    z-index: 99;
+}
+
+.next-button {
+    position: relative;
+    right: -140px;
+    top: 70px;
+    z-index: 99;
+}
+
+li {
+    padding-left: 10px;
+    list-style: none;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.addtocart{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+.addtocart:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 900px) {
+    .image {
+        top: -180px;
+        position: absolute;
+        max-width: 280px;
+        z-index: 3;
+    }
+
+    body {
+        align-items: center;
+    }
+
+    .half2 h2 {
+        font-size: 18px;
+    }
+
+    .half2 h3 {
+        font-size: 14px;
+    }
+
+    .design {
+        left: 30px;
+        top: 60px;
+    }
+
+    .box1 {
+        align-items: center;
+        width: 200px;
+        height: 400px;
+        background-color: rgb(12, 31, 44);
+        padding: 10px;
+        flex-direction: column-reverse;
+        z-index: 2;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+        font-size: 10px;
+    }
+
+    .box2 {
+        background-color: rgb(204, 56, 67);
+        width: 265px;
+        height: 200px;
+        position: absolute;
+        top: -120px;
+        left: -20px;
+        z-index: 1;
+        border-radius: 20px;
+    }
+    .box2 {
+        font-family: 'Montserrat', sans-serif;
+        rotate: 90deg;
+        font-size: 45px;
+        text-align: center;
+        color: rgb(163, 45, 54);
+        font-weight: bolder;
+        text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+    }
+
+    .prev-button {
+        left: -230px;
+        top: 70px;
+    }
+
+    .next-button {
+        right: 10px;
+        top: 70px;
+    }
+}

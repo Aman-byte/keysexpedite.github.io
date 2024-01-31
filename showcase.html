@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="showcase.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:opsz,wght@6..12,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <title>KeysExpedite</title>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">
+    <div class="logo">
+        <img src="Circle.png" alt="Logo">
+    </div></a>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="categorypage.html">Products</a></li>
+
+        <li><a href="showcase.html">Showcase</a></li>
+    </ul>
+
+    <div class="icons">
+        <div class="search">
+            <form action="#">
+                <input type="text" id="searchInput" oninput="performSearch()" placeholder="Search Products" name="search">
+                <ul id="searchResults"></ul>
+            </form>
+        </div>
+        <a href="logintrail.html" style="text-decoration: none; color: inherit;">
+        <span class="material-symbols-outlined" style="padding-right: 5px; padding-left: 5px;">person</span> </a>
+        <a href="cartpagetrial.html" style="text-decoration: none; color: inherit;">
+        <span class="material-symbols-outlined" style="padding-right: 5px;">shopping_bag</span></a>
+    </div>
+
+    <div class="hamburger-menu" id="menuToggle">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</div>
+
+<!-- Your website content goes here -->
+<!-- Image gallery container -->
+<div class="container">
+    <div class="gallery">
+        <!-- Images for the showcase -->
+        <!-- Add alt text for accessibility -->
+        <div class="one"><img src="showcase/kartikay1.jpg" alt="kartikay desk"></div>
+        <div class="two"><img src="showcase/kartikay2.jpg" alt="kartikay keeb and mouse"></div>
+        <div class="three"><img src="showcase/setup2.jpg" alt="japanesebluewhitekeeb"></div>
+        <div class="four"><img src="showcase/setup3.jpg" alt="blue setup"></div>
+        <div class="five"><img src="showcase/setup1.jpg" alt="red setup"></div>
+        <div class="six"><img src="showcase/kartikay3.jpg" alt="kartikay deskmat"></div>
+        <!-- Uncomment if the seventh image is needed -->
+        <!-- <div class="seven"><img src="gundam.jpg" alt="gundam"></div> -->
+        <div class="eight"><img src="showcase/setup4.jpg" alt="mozart"></div>
+        <div class="nine"><img src="showcase/setup5.jpg" alt="Johnny Bravo"></div>
+        <div class="ten"><img src="showcase/setup6.jpg" alt="tommy"></div>
+        <div class="eleven"><img src="showcase/setup7.jpg" alt="Don saliery"></div>
+        <div class="twelve"><img src="showcase/setup8.jpg" alt="Godfather"></div>
+    </div>
+</div>
+
+
+<!-- footer starts here -->
+<div class="footer">
+    <div class="footer-section">
+        <h2>Address</h2>
+        <p>123 Street,</p>
+        <p>Delhi, North Delhi,</p>
+        <p>India, 110000</p>
+    </div>
+    <div class="footer-section">
+        <h2>Information</h2>
+        <p>About Us</p>
+        <p>Contact Us</p>
+        <p>Terms & Conditions</p>
+    </div>
+    <div class="footer-section">
+        <h2>Newsletter</h2>
+        <p>Subscribe to our newsletter</p>
+        <p><input type="email" placeholder="Footer is Only Design">
+        <button style="width: 100px; height: 30px; background-color: red; color: white;">Subscribe</button></p>
+    </div>
+    <div class="footer-logo">
+        <!-- <img src="Half Logo Kxp.png" alt="Company Logo"> -->
+        <img src="Circle.png" alt="Company Logo" style="height: 200px;">
+    </div>
+</div>
+<!-- footer ends here -->
+
+<!-- JavaScript for toggling the navigation menu -->
+
+<script src="app.js"></script>
+
+</body>
+</html>
