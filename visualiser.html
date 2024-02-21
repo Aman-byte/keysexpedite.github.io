@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #141414;
+      color: #61dafb;
+    }
+
+    #audio-container {
+      text-align: center;
+    }
+
+    canvas {
+      display: block;
+      margin: 20px auto;
+      background-color: #fff;
+    }
+
+    button {
+      background-color: #61dafb;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="audio-container">
+    <div>
+      <img src="Circle.png" alt="logo" style="width: 20%;">
+    </div> <br>
+    <audio id="audio" src="music.mp3" preload="auto"></audio>
+    <canvas id="visualizer" width="500" height="150"></canvas>
+    <div>
+      <button id="playPauseBtn">Play/Pause</button>
+      <button id="stopBtn">Stop</button>
+    </div>
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  let audioContext;
+  let analyser;
+  let dataArray;
+  let animationFrameId;
+
+  const audio = document.getElementById('audio');
+  const canvas = document.getElementById('visualizer');
+  const playPauseBtn = document.getElementById('playPauseBtn');
+  const stopBtn = document.getElementById('stopBtn');
+  const ctx = canvas.getContext('2d');
+
+  function initializeAudioContext() {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    analyser = audioContext.createAnalyser();
+    const source = audioContext.createMediaElementSource(audio);
+    source.connect(analyser);
+    analyser.connect(audioContext.destination);
+    analyser.fftSize = 256;
+    dataArray = new Uint8Array(analyser.frequencyBinCount);
+  }
+
+  playPauseBtn.addEventListener('click', togglePlayPause);
+  stopBtn.addEventListener('click', stopAudio);
+
+  function togglePlayPause() {
+    if (audio.paused) {
+      if (!audioContext) {
+        initializeAudioContext();
+      }
+      audio.play();
+      animate();
+    } else {
+      audio.pause();
+      // Start the decrease animation when paused
+      decreaseAnimation();
+      cancelAnimationFrame(animationFrameId);
+    }
+  }
+
+  function stopAudio() {
+    audio.pause();
+    audio.currentTime = 0;
+    // Start the decrease animation when stopped
+    decreaseAnimation();
+    cancelAnimationFrame(animationFrameId);
+  }
+
+  function decreaseAnimation() {
+    const duration = 500; // milliseconds
+    const startTime = Date.now();
+    const initialVolume = audio.volume;
+
+    function decreaseStep() {
+      const currentTime = Date.now();
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+      audio.volume = initialVolume * (1 - progress);
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(decreaseStep);
+      }
+    }
+
+    decreaseStep();
+  }
+
+  function animate() {
+    analyser.getByteFrequencyData(dataArray);
+    draw();
+    animationFrameId = requestAnimationFrame(animate);
+  }
+
+  function draw() {
+    const width = canvas.width;
+    const height = canvas.height;
+    const barWidth = (width / dataArray.length) * 2.5;
+    const barHeightMultiplier = 0.5;
+
+    ctx.clearRect(0, 0, width, height);
+
+    for (let i = 0; i < dataArray.length; i++) {
+      const barHeight = dataArray[i] * barHeightMultiplier;
+
+      ctx.fillStyle = `rgb(0, ${barHeight + 50}, 255)`;
+      ctx.fillRect(i * barWidth, height - barHeight, barWidth, barHeight);
+    }
+  }
+});
+
+
+  </script>
+</body>
+</html>
+  
